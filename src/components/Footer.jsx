@@ -4,6 +4,7 @@ import Logo from "../assets/images/logo.svg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebook, faMeetup, faStrava} from "@fortawesome/free-brands-svg-icons";
 import {FB_URI, MEETUP_URI, STRAVA_URI} from "../text/externalLinks";
+import {COPYRIGHT, DESC} from "../text/Footer";
 
 const Footer = () => {
   return (<footer>
@@ -13,8 +14,7 @@ const Footer = () => {
             <img src={Logo} alt="Footer Logo"/>
           </Link>
           <p>
-            Explore the joy of running with a supportive community that shares your passion. Lace up your shoes and join
-            us on the road to fitness, friendship, and fun. Happy running!
+            {DESC}
           </p>
           <div className="footer__socials">
             <a href={MEETUP_URI}
@@ -48,7 +48,7 @@ const Footer = () => {
         </article>
       </div>
       <div className="footer__copyright">
-        <small> &copy; Mid-Peninsula Running Club 1988-2024 </small>
+        <small> &copy; {COPYRIGHT}</small>
       </div>
     </footer>);
 };
