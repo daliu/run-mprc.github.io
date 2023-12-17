@@ -1,0 +1,24 @@
+.joinus__container {
+  display: grid;
+  place-items: center;
+}
+
+.joinus__wrapper {
+  width: fit-content;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .joinus__wrapper {
+    gap: 1.5rem;
+  }
+}
+
+.li_joinus {
+  list-style-type: disc;
+  text-align: left;
+}
+
+.h2_joinus {
+  padding-bottom: 2rem;
+}
