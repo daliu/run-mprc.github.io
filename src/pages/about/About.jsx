@@ -19,12 +19,6 @@ const About = () => {
         </div>
       </div>
     </section>
-    
-    <section className="img_section">
-      <h2>{IMG_SECTION_TITLE}</h2>
-      <img src={RouteImage} alt="RouteImage"></img>
-    </section>
-    
     <section className="about__mission">
       <div className="container about__mission-container">
         {/*<div className="about__section-image">
