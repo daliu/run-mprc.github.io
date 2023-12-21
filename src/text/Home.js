@@ -17,8 +17,8 @@ export const IMG_SECTION_TITLE = "Saturday Runs Route(s)";
 export const ABOUT_MISSION_TITLE = "Our Mission";
 export const ABOUT_MISSION_CONTENT = [
     "At our core, we're all about \"supporting one another\". We believe in creating a running community where everyone feels feels encouraged and connected.",
-    "Now, we've got this informal motto too: 'The Eating Club with a Running Problem.' We get it – we love our post-run snacks as much as the run itself!",
+    "Now, we've got this informal motto about ourselves too, that we are : \"an eating club with a running problem\". We get it – we love our post-run snacks as much as the run itself!",
     "So, our mission? Pairing you up with a run or walk buddy because we believe in the power of running side by side. It's not just about the miles; it's about the friendships, the shared laughs, and, yes, the good eats.",
-    "Join us in celebrating the joy of running, supporting one another, and, of course, we sometimes like to refer to ourselves as \"an eating club with a running problem\". Let's hit the trails, share some stories, and enjoy the ride – one step at a time!",];
+    "Join us in celebrating the joy of running and in our mission of supporting one another. Let's hit the trails, share some stories, and enjoy the ride – one step at a time!",];
 
 export const JOINBUTTON = "Join Us Now!";
