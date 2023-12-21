@@ -12,6 +12,11 @@ import Brunch2 from "../../images/activities/brunch2.jpeg";
 import Brunch3 from "../../images/activities/brunch3.jpeg";
 
 const Activities = () => {
+  const morningRunContent = () => (
+    <div>
+      Every Saturday morning, we run on the part of the Bay trail near downtown San Mateo. We meet in Seal Point Park near the green marker on the map listed below - come rain or shine. We welcome all paces and walkers as well. To get our starting time, fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSd574vmu9CgznB3JxV01Vkjz3RijuhbHEqb6pCCRuC6s7DiHg/viewform">waiver</a>, and come join us!
+    </div>
+  );
   const brunchImages = [Brunch1, Brunch2, Brunch3];
   return (
     <>
@@ -20,7 +25,8 @@ const Activities = () => {
         <div className="first:mt-8">
           <Subheader title="Saturday Morning Run" />
         </div>
-        <Paragraph text="Every Saturday morning, we run on the part of the Bay trail near downtown San Mateo. We meet in Seal Point Park near the green marker on the map listed below - 9AM come rain or shine. We welcome all paces and walkers as well. " />
+        
+        <Paragraph text={morningRunContent()} />
         <MetaText text="Saturday Morning route" />
         <iframe
           class="lg"
@@ -35,18 +41,6 @@ const Activities = () => {
         <Paragraph text="Celebrate the end of each month with our Run Club Socials! These gatherings are a fantastic way to connect with other members over homemade goodies, fruits, and refreshing beverages, provided by the club." />
       </div>
     </>
-    /*<div id="activities">
-      <h1>Activities</h1>
-      <p>Saturday morning Bay Trail runs of up to 6 miles or up to one hour.</p>
-      <p>
-        Social Gathering takes place the last Saturday of every month after the
-        run. Coffee, tea, hot chocolate, pastries, etc. served All are welcome.
-      </p>
-      <p>
-        Social events throughout the year: picnics, hikes, fun activities for
-        MPRC members only.
-      </p>
-    </div>*/
   );
 };
 
