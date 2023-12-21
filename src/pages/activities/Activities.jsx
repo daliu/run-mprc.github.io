@@ -17,6 +17,7 @@ import Activity2 from "../../images/activities/social1.jpeg";
 import Extra1 from "../../images/activities/extra1.jpg";
 import Extra2 from "../../images/activities/extra2.jpeg";
 import Extra3 from "../../images/activities/extra3.jpeg";
+import {RouteLeaflet} from "./RouteLeaflet";
 
 const brunchImages = [Brunch1, Brunch2, Brunch3];
 const activityImages = [Activity1, Activity2];
@@ -38,17 +39,11 @@ const Activities = () => {
                 and come join us!
             </Paragraph>
             <MetaText>Saturday Morning route</MetaText>
-            <iframe
-                title="route"
-                src="https://www.google.com/maps/d/u/0/embed?mid=1cwNJH9lAaZARx46mSYcWRkM_NQpA56U&ehbc=2E312F"
-                width="540"
-                height="360"
-            ></iframe>
+            <RouteLeaflet/>
             <Subheader title="Brunch"/>
             <Paragraph>"We love to eat just as much as we love to run (or more). After most Saturday runs, we organize a
                 group of folks that would like to hang out in a restaurant in the community.</Paragraph>
             <ImageCarousel images={brunchImages}/>
-
             <Subheader title="Run Club Social"/>
             <Paragraph>Celebrate the end of each month with our Run Club Socials! These gatherings are a fantastic way
                 to connect with other members over homemade goodies, fruits, and refreshing beverages, provided by the
