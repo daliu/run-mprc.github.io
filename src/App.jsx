@@ -13,7 +13,7 @@ import JoinUs from "./pages/joinUs/JoinUs";
 import Activities from "./pages/activities/Activities";
 
 const App = () => {
-    return (<BrowserRouter basename="/">
+    return (<BrowserRouter>
         <Navbar/>
         <Routes>
             <Route index element={<Home/>}/>
