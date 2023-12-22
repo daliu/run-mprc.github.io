@@ -31,7 +31,6 @@ const Navbar = () => {
             >
                 {/* Destructure the links array of object from the links to get each item */}
                 {links.map(({name, path}, index) => {
-                    // const { path, label} = navItems[index]
                     return (<li key={index} style={animationDelay(index)}>
                         <NavLink
                             to={path}

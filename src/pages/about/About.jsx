@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-import RouteImage from "../../images/about/route.png";
 import {
   ABOUT_MISSION_CONTENT, ABOUT_MISSION_TITLE, ABOUT_STORY_CONTENT, ABOUT_STORY_TITLE, IMG_SECTION_TITLE, JOINBUTTON
 } from "../../text/Home";

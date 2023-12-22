@@ -7,6 +7,9 @@ module.exports = {
     container: {
       center: true,
     },
+    colors: {
+      accentColor: '#2196F3',
+    },
   },
   plugins: [],
 }
