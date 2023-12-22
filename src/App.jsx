@@ -13,20 +13,21 @@ import JoinUs from "./pages/joinUs/JoinUs";
 import Activities from "./pages/activities/Activities";
 
 const App = () => {
-  return (<BrowserRouter>
-    <Navbar/>
-    <Routes>
-      <Route index element={<Home/>}/>
-      <Route path="about" element={<About/>}/>
-      <Route path="activities" element={<Activities/>}/>
-      <Route path="contact" element={<Contact/>}/>
-      <Route path="gallery" element={<Gallery/>}/>
-      <Route path="joinus" element={<JoinUs/>}/>
-      <Route path="committee" element={<Committee/>}/>
-      <Route path="*" element={<NotFound/>}/>
-    </Routes>
-    <Footer/>
-  </BrowserRouter>);
+    return (<BrowserRouter>
+        <Navbar/>
+        <Routes>
+            <Route index element={<Home/>}/>
+            <Route path="about" element={<About/>}/>
+            <Route path="activities" element={<Activities/>}/>
+            <Route path="contact" element={<Contact/>}/>
+            {/*TODO(Jeffrey): do we need this*/}
+            {/*<Route path="gallery" element={<Gallery/>}/>*/}
+            <Route path="joinus" element={<JoinUs/>}/>
+            <Route path="committee" element={<Committee/>}/>
+            <Route path="*" element={<NotFound/>}/>
+        </Routes>
+        <Footer/>
+    </BrowserRouter>);
 };
 
 export default App;
