@@ -2,10 +2,10 @@ import React, {useEffect, useState} from 'react';
 import {MapContainer, Marker, Polyline, Popup, TileLayer} from 'react-leaflet';
 import route from './route.gpx';
 import GPXParser from 'gpxparser';
+import theme from "../../theme";
 
 export const Route = () => {
     const [polylinePositions, setPolylinePositions] = useState([]);
-
     useEffect(() => {
         fetch(route)
             .then(r => r.text())
@@ -22,7 +22,6 @@ export const Route = () => {
         <MapContainer style={{height: '400px', width: '800px'}} center={[37.57236641, -122.28687946]} zoom={14}
                       scrollWheelZoom={false}>
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={[37.57401089, -122.302166]}>
@@ -32,7 +31,7 @@ export const Route = () => {
             </Marker>
             {polylinePositions.length > 0 && (
                 <Polyline
-                    pathOptions={{color: '#1E88E5'}}
+                    pathOptions={{color: theme.palette.primary.main}}
                     positions={polylinePositions}
                 />
             )}
