@@ -1,9 +1,9 @@
 import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
-import { Route } from "./Route";
+import {Route} from "./Route";
 
 export const RouteLeaflet = () => {
     return (
-        <MapContainer style={{height: '400px', width: '800px'}} center={[51.505, -0.09]} zoom={13}
+        <MapContainer style={{height: '40vh', width: '100%', maxWidth: '800px'}} center={[51.505, -0.09]} zoom={11}
                       scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
