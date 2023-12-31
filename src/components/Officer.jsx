@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "../UI/Card";
 
-const Officer = ({image, name, job, socials}) => {
-  return (<Card className="trainer">
+const Officer = ({ image, name, job, socials }) => {
+  return (
+    <Card className="trainer">
       <div className="trainer__img">
-        <img src={image} alt={name}/>
+        <img src={image} alt={name} />
       </div>
       <h3>{name}</h3>
       <p>{job}</p>
@@ -22,7 +23,8 @@ const Officer = ({image, name, job, socials}) => {
 					);
 				})}
 			</div>*/}
-    </Card>);
+    </Card>
+  );
 };
 
 export default Officer;

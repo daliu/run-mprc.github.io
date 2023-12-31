@@ -41,7 +41,6 @@
   background: var(--color-gray-500);
 }
 
-
 /* MEDIA QUERIES (medium sxreen) */
 @media screen and (max-width: 1024px) {
   .trainers__container {

@@ -1,10 +1,15 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {HOME_HERO_BUTTON_TEXT, HOME_HERO_TEXT_1, HOME_HERO_TEXT_2} from "../text/Home";
-import {MEETUP_URI} from "../text/externalLinks";
+import { Link } from "react-router-dom";
+import {
+  HOME_HERO_BUTTON_TEXT,
+  HOME_HERO_TEXT_1,
+  HOME_HERO_TEXT_2,
+} from "../text/Home";
+import { MEETUP_URI } from "../text/externalLinks";
 
 const MainHeader = () => {
-  return (<header className="main__header">
+  return (
+    <header className="main__header">
       <div className="main__header-background">
         <div className="container main__header-container">
           <h1>{HOME_HERO_TEXT_1}</h1>
@@ -20,7 +25,6 @@ const MainHeader = () => {
         </div>
       </div>
     </header>
-  
   );
 };
 

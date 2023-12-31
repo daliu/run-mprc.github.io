@@ -2,14 +2,14 @@ import React from "react";
 import "./contact.css";
 import Header from "../../components/Header";
 import HeaderImage from "../../images/contact/header_bg_2.jpg";
-import {MdEmail} from "react-icons/md";
-import {CONTACT_DESCRIPTION, CONTACT_TITLE} from "../../text/ContactUs";
+import { MdEmail } from "react-icons/md";
+import { CONTACT_DESCRIPTION, CONTACT_TITLE } from "../../text/ContactUs";
 
 const Contact = () => {
-  return (<>
-      <Header title={CONTACT_TITLE} image={HeaderImage}>
-      </Header>
-      
+  return (
+    <>
+      <Header title={CONTACT_TITLE} image={HeaderImage}></Header>
+
       <section className="contact">
         <div className="container contact__container">
           {CONTACT_DESCRIPTION}
@@ -19,12 +19,13 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <MdEmail/>
+              <MdEmail />
             </a>
           </div>
         </div>
       </section>
-    </>);
+    </>
+  );
 };
 
 export default Contact;
