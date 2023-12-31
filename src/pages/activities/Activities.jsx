@@ -19,8 +19,6 @@ import Extra2 from "../../images/activities/extra2.jpeg";
 import Extra3 from "../../images/activities/extra3.jpeg";
 import { RouteLeaflet } from "./RouteLeaflet";
 import FlexColumnContainer from "../../components/FlexColumnContainer";
-import MembersOnly from "../../components/MembersOnly";
-import { RouteLeaflet } from "./RouteLeaflet";
 
 const brunchImages = [Brunch1, Brunch2, Brunch3];
 const activityImages = [Activity1, Activity2];
