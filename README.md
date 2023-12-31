@@ -1,5 +1,5 @@
 # run-mprc.github.io
-Live sites are runmprc.com and dev.runmprc.com for changes made in dev branch.
+Live sites are [runmprc.com](runmprc.com) and [dev.runmprc.com](dev.runmprc.com) for changes made in dev branch.
 
 ## Available Scripts
 
