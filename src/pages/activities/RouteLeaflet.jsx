@@ -3,7 +3,7 @@ import {Route} from "./Route";
 
 export const RouteLeaflet = () => {
     return (
-        <MapContainer style={{height: '40vh', width: '100%', maxWidth: '800px'}} center={[51.505, -0.09]} zoom={11}
+        <MapContainer style={{height: '40vh', width: '100%', maxWidth: '800px', zIndex: 0}} center={[51.505, -0.09]} zoom={11}
                       scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
