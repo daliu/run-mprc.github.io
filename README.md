@@ -1,6 +1,5 @@
 # run-mprc.github.io
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live sites are runmprc.com and dev.runmprc.com for changes made in dev branch.
 
 ## Available Scripts
 
