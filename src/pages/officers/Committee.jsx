@@ -6,11 +6,11 @@ import "./committee.css";
 import {COMMITTEE_INTRO, COMMITTEE_TITLE} from "../../text/Committee";
 
 const OfficerDefault = require("../../images/committee/committee_default_portrait.png");
-const Officer1 = require("../../images/committee/trainer1.jpg");
+//const Officer1 = require("../../images/committee/trainer1.jpg");
 const Officer2 = require("../../images/committee/dave.png");
-const Officer3 = require("../../images/committee/trainer3.jpg");
-const Officer4 = require("../../images/committee/trainer4.jpg");
-const Officer5 = require("../../images/committee/trainer5.jpg");
+//const Officer3 = require("../../images/committee/trainer3.jpg");
+//const Officer4 = require("../../images/committee/trainer4.jpg");
+//const Officer5 = require("../../images/committee/trainer5.jpg");
 const Officer6 = require("../../images/committee/debbie.png");
 const Officer7 = require("../../images/committee/patti.jpg")
 
