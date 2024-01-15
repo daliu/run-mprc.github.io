@@ -10,16 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
 
-      - name: Install dependencies
+      - name: Configure Git Identity
+        run: |
+          git config user.email "$(git log -1 --pretty=format:'%ae')"
+          git config user.name "$(git log -1 --pretty=format:'%an')"
+
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build and deploy
-        run: npm run deploy
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages -d build
