@@ -84,7 +84,8 @@ nav {
     display: none;
   }
 
-  .active-nav, .active-nav::after {
+  .active-nav,
+  .active-nav::after {
     display: none;
   }
 
@@ -121,5 +122,4 @@ nav {
   .hide__nav {
     display: none;
   }
-
 }

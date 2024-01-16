@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavigationBar from './components/NavigationBar';
-import Home from './pages/Home';
-import Activities from './pages/Activities';
-import Benefits from './pages/benefits';
-import JoinUs from './pages/joinUs';
-import ContactUs from './pages/contactUs';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar";
+import Home from "./pages/Home";
+import Activities from "./pages/Activities";
+import Benefits from "./pages/benefits";
+import JoinUs from "./pages/joinUs";
+import ContactUs from "./pages/contactUs";
 
 function App() {
   return (
