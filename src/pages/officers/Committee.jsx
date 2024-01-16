@@ -6,18 +6,21 @@ import "./committee.css";
 import { COMMITTEE_INTRO, COMMITTEE_TITLE } from "../../text/Committee";
 
 const OfficerDefault = require("../../images/committee/committee_default_portrait.png");
-const Officer1 = require("../../images/committee/trainer1.jpg");
+const Officer1 = require("../../images/committee/frances_1.jpeg");
+const Officer1_alt = require("../../images/committee/frances_2.jpg");
 const Officer2 = require("../../images/committee/dave.png");
-const Officer3 = require("../../images/committee/trainer3.jpg");
-const Officer4 = require("../../images/committee/trainer4.jpg");
-const Officer5 = require("../../images/committee/trainer5.jpg");
-const Officer6 = require("../../images/committee/debbie.png");
+const Officer3 = require("../../images/committee/ted.jpg");
+const Officer4 = require("../../images/committee/kat.jpg");
+const Officer5 = require("../../images/committee/frank.jpg");
+const Officer6 = require("../../images/committee/debbie.jpeg");
 const Officer7 = require("../../images/committee/patti.jpg");
+const Officer8 = require("../../images/committee/dalton.jpg");
 
 const officers = [
   {
     id: 1,
-    image: OfficerDefault,
+    image: Officer1,
+    image_alt: Officer1_alt,
     name: "Frances Schulze",
     job: "President" /* socials: [
       "https://instagram.com/",
@@ -34,19 +37,19 @@ const officers = [
   },
   {
     id: 3,
-    image: OfficerDefault,
+    image: Officer3,
     name: "Ted Levine",
     job: "Treasurer",
   },
   {
     id: 4,
-    image: OfficerDefault,
+    image: Officer4,
     name: "Kat Mar",
     job: "Secretary",
   },
   {
     id: 5,
-    image: OfficerDefault,
+    image: Officer5,
     name: "Frank Markowitz",
     job: "Newsletter Editor",
   },
@@ -62,6 +65,12 @@ const officers = [
     name: "Patti Chan",
     job: "Social Director",
   },
+  {
+    id: 8,
+    image: Officer8,
+    name: "Dalton Chan",
+    job: "Photographer",
+  },
 ];
 
 const Committee = () => {
@@ -70,13 +79,14 @@ const Committee = () => {
       <Header image={HeaderImage} title={COMMITTEE_TITLE}>
         {COMMITTEE_INTRO}
       </Header>
-      <section className="trainers">
-        <div className="container trainers__container">
-          {officers.map(({ id, image, name, job, socials }) => {
+      <section className="officers">
+        <div className="container officers__container">
+          {officers.map(({ id, image, image_alt, name, job, socials }) => {
             return (
               <Officer
                 key={id}
                 image={image}
+                image_alt={image_alt}
                 name={name}
                 job={job}
                 /*socials={[
