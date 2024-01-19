@@ -18,16 +18,16 @@ import Extra1 from "../../images/activities/extra1.jpg";
 import Extra2 from "../../images/activities/extra2.jpeg";
 import Extra3 from "../../images/activities/extra3.jpeg";
 import { RouteLeaflet } from "./RouteLeaflet";
+import FlexColumnContainer from "../../components/FlexColumnContainer";
 
 const brunchImages = [Brunch1, Brunch2, Brunch3];
 const activityImages = [Activity1, Activity2];
 const extraImages = [Extra1, Extra2, Extra3];
-
 const Activities = () => {
   return (
     <>
       <Header title="Activities" image={HeaderImage} />
-      <div className="container mx-auto md flex flex-col items-center">
+      <FlexColumnContainer>
         <div className="first:mt-8">
           <Subheader title="Saturday Morning Run" />
         </div>
@@ -66,7 +66,7 @@ const Activities = () => {
           club.
         </Paragraph>
         <ImageCarousel images={extraImages} />
-      </div>
+      </FlexColumnContainer>
     </>
   );
 };
