@@ -23,11 +23,6 @@ export const links = [
     id: 'committee',
   },
   {
-    name: 'Join Us',
-    path: '/joinus',
-    id: 'joinus',
-  },
-  {
     name: 'Contact Us',
     path: '/contact',
     id: 'contact',
