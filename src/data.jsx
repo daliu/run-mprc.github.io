@@ -13,6 +13,11 @@ export const links = [
     id: 'home',
   },
   {
+    name: 'Join Us',
+    path: '/joinus',
+    id: 'joinus',
+  },
+  {
     name: 'Activities',
     path: '/activities',
     id: 'activities',
