@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   MapContainer,
   Marker,
   Polyline,
   Popup,
   TileLayer,
-} from 'react-leaflet';
-import GPXParser from 'gpxparser';
-import route from './route.gpx';
-import theme from '../../theme';
+} from "react-leaflet";
+import route from "./route.gpx";
+import GPXParser from "gpxparser";
+import theme from "../../theme";
 
-function Route() {
+export const Route = () => {
   const [polylinePositions, setPolylinePositions] = useState([]);
   useEffect(() => {
     fetch(route)
@@ -29,7 +29,7 @@ function Route() {
 
   return (
     <MapContainer
-      style={{ height: '400px', width: '800px' }}
+      style={{ height: "400px", width: "800px" }}
       center={[37.57236641, -122.28687946]}
       zoom={14}
       scrollWheelZoom={false}
@@ -46,6 +46,4 @@ function Route() {
       )}
     </MapContainer>
   );
-}
-
-export default Route;
+};

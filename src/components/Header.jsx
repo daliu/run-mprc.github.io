@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-function Header({ title, image, children }) {
+const Header = ({ title, image, children }) => {
   return (
     <header className="header">
       <div className="header__container">
@@ -15,12 +14,6 @@ function Header({ title, image, children }) {
       </div>
     </header>
   );
-}
-
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
 };
 
 export default Header;

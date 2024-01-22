@@ -1,12 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-function Subheader({ title }) {
+const Subheader = ({ title }) => {
   return <h2 className="my-8">{title}</h2>;
-}
-
-Subheader.propTypes = {
-  title: PropTypes.string.isRequired,
 };
 
 export default Subheader;

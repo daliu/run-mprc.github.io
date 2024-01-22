@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   HOME_HERO_BUTTON_TEXT,
   HOME_HERO_TEXT_1,
   HOME_HERO_TEXT_2,
-} from '../text/Home';
-import { MEETUP_URI } from '../text/externalLinks';
+} from "../text/Home";
+import { MEETUP_URI } from "../text/externalLinks";
 
-function MainHeader() {
+const MainHeader = () => {
   return (
     <header className="main__header">
       <div className="main__header-background">
@@ -26,6 +26,6 @@ function MainHeader() {
       </div>
     </header>
   );
-}
+};
 
 export default MainHeader;

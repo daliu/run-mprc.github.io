@@ -1,12 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-function MetaText({ children }) {
+const MetaText = ({ children }) => {
   return <h5 className="my-4">{children}</h5>;
-}
-
-MetaText.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default MetaText;

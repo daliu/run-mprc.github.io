@@ -1,12 +1,12 @@
-import React from 'react';
-import { GiCutDiamond } from 'react-icons/gi';
-import Image from '../images/values.jpg';
-import SectionHead from './SectionHead';
-import { values } from '../data';
-import Card from '../UI/Card';
+import React from "react";
+import Image from "../images/values.jpg";
+import SectionHead from "./SectionHead";
+import { GiCutDiamond } from "react-icons/gi";
+import { values } from "../data";
+import Card from "../UI/Card";
 
 // TODO: REMOVE
-function Values() {
+const Values = () => {
   return (
     <section className="values">
       <div className="container values__container">
@@ -22,20 +22,20 @@ function Values() {
             aonsectetur ad labore pariatur.
           </p>
           <div className="values__wrapper">
-            {values.map(({
-              id, icon, title, desc,
-            }) => (
-              <Card className="values__value" key={id}>
-                <span>{icon}</span>
-                <h4>{title}</h4>
-                <small>{desc}</small>
-              </Card>
-            ))}
+            {values.map(({ id, icon, title, desc }) => {
+              return (
+                <Card className="values__value" key={id}>
+                  <span>{icon}</span>
+                  <h4>{title}</h4>
+                  <small>{desc}</small>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Values;

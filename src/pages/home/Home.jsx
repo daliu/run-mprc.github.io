@@ -1,19 +1,19 @@
-import React from 'react';
-import './home.css';
-import MainHeader from '../../components/MainHeader';
-import About from '../about/About';
+import React from "react";
+import "./home.css";
+import MainHeader from "../../components/MainHeader";
+import About from "../about/About";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <MainHeader />
       <About />
-      {/* <Program/>
+      {/*<Program/>
     <Values/>
     <FAQs/>
-    <Testimonial/> */}
+    <Testimonial/>*/}
     </>
   );
-}
+};
 
 export default Home;

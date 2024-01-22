@@ -1,28 +1,30 @@
-import React, { useState } from 'react';
-import { ImQuotesLeft } from 'react-icons/im';
+import React, { useState } from "react";
+import SectionHead from "./SectionHead";
+import { ImQuotesLeft } from "react-icons/im";
+import Card from "../UI/Card";
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
-} from 'react-icons/io';
-import SectionHead from './SectionHead';
-import Card from '../UI/Card';
-import { testimonials } from '../data';
+} from "react-icons/io";
+import { testimonials } from "../data";
 
 // TODO: REMOVE
-function Testimonial() {
+const Testimonial = () => {
   const [index, setIndex] = useState(0);
-  const {
-    name, quote, job, avatar,
-  } = testimonials[index];
+  const { name, quote, job, avatar } = testimonials[index];
 
   const handlePreviousTestimonial = () => {
-    setIndex((prevValue) => prevValue - 1);
+    setIndex((prevValue) => {
+      return prevValue - 1;
+    });
     if (index <= 0) {
       setIndex(testimonials.length - 1);
     }
   };
   const handleAfterTestimonial = () => {
-    setIndex((prevValue) => prevValue + 1);
+    setIndex((prevValue) => {
+      return prevValue + 1;
+    });
     if (index >= testimonials.length - 1) {
       setIndex(0);
     }
@@ -61,6 +63,6 @@ function Testimonial() {
       </div>
     </section>
   );
-}
+};
 
 export default Testimonial;

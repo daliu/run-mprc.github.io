@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './notFound.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./notFound.css";
 
-function NotFound() {
+const NotFound = () => {
   return (
     <section>
       <div className="container notFound__container">
@@ -13,6 +13,6 @@ function NotFound() {
       </div>
     </section>
   );
-}
+};
 
 export default NotFound;

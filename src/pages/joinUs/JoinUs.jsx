@@ -1,9 +1,7 @@
-import React from 'react';
-import './joinUs.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faMeetup } from '@fortawesome/free-brands-svg-icons';
-import Header from '../../components/Header';
-import HeaderImage from '../../images/joinus/header_bg_1.jpg';
+import React from "react";
+import "./joinUs.css";
+import Header from "../../components/Header";
+import HeaderImage from "../../images/joinus/header_bg_1.jpg";
 import {
   ARM,
   GOOGLE_FORM,
@@ -26,18 +24,20 @@ import {
   LI_SATURDAY_CLUB_RUNS,
   LI_SOCIAL_RACE_ACTIVITIES,
   MEETUP_GROUP,
-} from '../../text/JoinUs';
-import Card from '../../UI/Card';
+} from "../../text/JoinUs";
+import Card from "../../UI/Card";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle, faMeetup } from "@fortawesome/free-brands-svg-icons";
 import {
   ARM_URI,
   GOOGLE_FORM_LINK,
   MEETUP_URI,
-} from '../../text/externalLinks';
+} from "../../text/externalLinks";
 
-function JoinUs() {
+const JoinUs = () => {
   return (
     <>
-      <Header title={JOIN_US_TITLE} image={HeaderImage} />
+      <Header title={JOIN_US_TITLE} image={HeaderImage}></Header>
 
       <section className="joinus">
         <div className="container joinus__container">
@@ -52,10 +52,7 @@ function JoinUs() {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    {MEETUP_GROUP}
-                    {' '}
-                    <FontAwesomeIcon icon={faMeetup} />
-                    .
+                    {MEETUP_GROUP} <FontAwesomeIcon icon={faMeetup} />.
                   </a>
                 </li>
                 <li className="li_joinus">{JOIN_US_DESCRIPTION_2}</li>
@@ -67,11 +64,7 @@ function JoinUs() {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    {GOOGLE_FORM}
-                    {' '}
-                    <FontAwesomeIcon icon={faGoogle} />
-                    .
-                    {' '}
+                    {GOOGLE_FORM} <FontAwesomeIcon icon={faGoogle} />.{" "}
                   </a>
                 </li>
                 <li className="li_joinus">{JOIN_US_DESCRIPTION_5}</li>
@@ -104,6 +97,6 @@ function JoinUs() {
       </section>
     </>
   );
-}
+};
 
 export default JoinUs;

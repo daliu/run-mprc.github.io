@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import React, { useState } from "react";
+import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineMinus } from "react-icons/ai";
 
-function FAQ({ question, answer }) {
+const FAQ = ({ question, answer }) => {
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
 
-  const handleFAQ = () => setIsAnswerShowing((prevValue) => !prevValue);
+  const handleFAQ = () => {
+    return setIsAnswerShowing((prevValue) => {
+      return !prevValue;
+    });
+  };
 
   return (
     <article className="faq" onClick={handleFAQ}>
@@ -17,6 +22,6 @@ function FAQ({ question, answer }) {
       {isAnswerShowing && <p>{answer}</p>}
     </article>
   );
-}
+};
 
 export default FAQ;
