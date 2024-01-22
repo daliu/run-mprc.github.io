@@ -1,0 +1,29 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /{document=**} {
+			allow read, write: if request.auth != null && request.auth.token.role == 'admin';
+    }
+
+    // Rules for any document within the members_only collection
+    match /members_only/{document} {
+      // Admins can read and write
+      allow read, write: if request.auth != null && request.auth.token.role == 'admin';
+
+      // Members can only read
+      allow read: if request.auth != null && request.auth.token.role == 'member';
+    }
+
+    // Rules for the event collection
+    // If member_only is not true (resource.data.member_only != true), any authenticated user can read the document.
+    // If member_only is true, then only users with a role of 'member' (request.auth.token.role == 'member') can read
+    // the document.
+
+    match /events/{event} {
+        allow read: if request.auth != null &&
+        (resource.data.member_only != true || request.auth.token.role == 'member');
+    }
+  }
+}
