@@ -37,6 +37,7 @@ function Activities() {
           downtown San Mateo. We meet in Seal Point Park near the green marker
           on the map listed below - come rain or shine. We welcome all paces and
           walkers as well. Non-members can run with us, but must agree to the waiver
+          {' '}
           <a href="https://www.meetup.com/mid-peninsula-running-club/">
             on our Meetup Page. No exceptions, sorry!
           </a>
