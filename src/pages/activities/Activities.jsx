@@ -36,11 +36,12 @@ function Activities() {
           Every Saturday morning, we run on the part of the Bay trail near
           downtown San Mateo. We meet in Seal Point Park near the green marker
           on the map listed below - come rain or shine. We welcome all paces and
-          walkers as well. Non-members can run with us, but must agree to the waiver
+          walkers as well. Non-members can run with us, but must agree to the waiver on our 
           {' '}
           <a href="https://www.meetup.com/mid-peninsula-running-club/">
-            on our Meetup Page. No exceptions, sorry!
+            Meetup Page.
           </a>
+          No exceptions, sorry!
         </Paragraph>
         <MetaText>Saturday Morning route (See time on MeetUp)</MetaText>
         <RouteLeaflet />
