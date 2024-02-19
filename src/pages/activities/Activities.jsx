@@ -17,7 +17,6 @@ import Activity2 from '../../images/activities/social1.jpeg';
 import Extra1 from '../../images/activities/extra1.jpg';
 import Extra2 from '../../images/activities/extra2.jpeg';
 import Extra3 from '../../images/activities/extra3.jpeg';
-import RouteLeaflet from './RouteLeaflet';
 import FlexColumnContainer from '../../components/FlexColumnContainer';
 
 const brunchImages = [Brunch1, Brunch2, Brunch3];
@@ -42,8 +41,6 @@ function Activities() {
             on our Meetup Page. No exceptions, sorry!
           </a>
         </Paragraph>
-        <MetaText>Saturday Morning route (See time on MeetUp)</MetaText>
-        <RouteLeaflet />
         <Subheader title="Brunch" />
         <Paragraph>
           &ldquo;Our informal motto is "the eating club with a running problem".
