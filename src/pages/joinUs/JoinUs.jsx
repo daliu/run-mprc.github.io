@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './joinUs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faMeetup } from '@fortawesome/free-brands-svg-icons';
-import Header from '../../components/Header';
-import HeaderImage from '../../images/joinus/header_bg_1.jpg';
+import MetaText from '../../components/MetaText';
 import {
   ARM,
   GOOGLE_FORM,
@@ -14,7 +13,6 @@ import {
   JOIN_US_DESCRIPTION_3,
   JOIN_US_DESCRIPTION_4,
   JOIN_US_DESCRIPTION_5,
-  JOIN_US_TITLE,
   LI_ACCESS_TO_STRAVA_FACEBOOK,
   LI_AFFORDABLE_MEMBERSHIP_FEES,
   LI_CLUB_GATHERINGS,
@@ -36,6 +34,7 @@ import {
   GOOGLE_FORM_LINK,
   MEETUP_URI,
 } from '../../text/externalLinks';
+import Route from './Route';
 
 const sectionRunWithUs = () => (
   <Card className="joinus__card">
@@ -43,11 +42,7 @@ const sectionRunWithUs = () => (
     <ul className="ul_joinus">
       <li className="li_joinus">
         {JOIN_US_DESCRIPTION_1}
-        <a
-          href={MEETUP_URI}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
+        <a href={MEETUP_URI} target="_blank" rel="noreferrer noopener">
           {MEETUP_GROUP}
           {' '}
           <FontAwesomeIcon icon={faMeetup} />
@@ -74,11 +69,7 @@ const sectionBecomeMember = () => (
     <ul className="ul_joinus">
       <li className="li_joinus">
         {JOIN_US_DESCRIPTION_4}
-        <a
-          href={GOOGLE_FORM_LINK}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
+        <a href={GOOGLE_FORM_LINK} target="_blank" rel="noreferrer noopener">
           {GOOGLE_FORM}
           {' '}
           <FontAwesomeIcon icon={faGoogle} />
@@ -125,21 +116,22 @@ const sectionMemberBenefits = () => (
 
 function JoinUs() {
   return (
-    <>
-      <Header title={JOIN_US_TITLE} image={HeaderImage} />
+    <section className="joinus">
 
-      <section className="joinus">
-        <div className="container joinus__container">
-          <div className="joinus__wrapper">
-            {sectionRunWithUs()}
+      <div className="container joinus__container">
+        <div className="joinus__wrapper">
+          {sectionRunWithUs()}
             &nbsp;&nbsp;
-            {sectionBecomeMember()}
+          {sectionBecomeMember()}
             &nbsp;&nbsp;
-            {sectionMemberBenefits()}
-          </div>
+          {sectionMemberBenefits()}
         </div>
-      </section>
-    </>
+        <div className="route-map">
+          <MetaText>Saturday Morning Route</MetaText>
+          <Route />
+        </div>
+      </div>
+    </section>
   );
 }
 

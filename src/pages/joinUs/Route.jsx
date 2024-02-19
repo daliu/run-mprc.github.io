@@ -29,7 +29,9 @@ function Route() {
 
   return (
     <MapContainer
-      style={{ height: '400px', width: '800px' }}
+      style={{
+        height: '400px', width: '100%', maxWidth: '800px', zIndex: 1,
+      }}
       center={[37.57236641, -122.28687946]}
       zoom={14}
       scrollWheelZoom={false}
