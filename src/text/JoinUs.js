@@ -1,16 +1,20 @@
 export const JOIN_US_TITLE = 'JOIN US';
+export const JOIN_US_HEADING_DESC = 'We gather every Saturday morning at Seal Point Park (1901 J Hart Clinton Dr, San Mateo, CA 94401) by the four cement benches at 8:45 am, and we begin our runs at 9:00 am. Come and run with us!';
 export const JOIN_US_DESCRIPTION_1 = 'Join us through ';
 export const MEETUP_GROUP = 'Meetup ';
-export const JOIN_US_DESCRIPTION_2 = 'Joining Meetup and attending a run are both free of charge.';
-export const JOIN_US_DESCRIPTION_3 = 'You don\'t need to be an official MPRC club member to join our runs, but you must RSVP to the Meetup event.';
-export const JOIN_US_DESCRIPTION_4 = 'Become an official MPRC club member by filling out the ';
+export const JOIN_US_DESCRIPTION_2 = 'Joining Meetup and attending runs are both free of charge.';
+export const JOIN_US_DESCRIPTION_3 = 'You don\'t have to be an MPRC member to run with us but feel free to check out our meetup for the calendar invites.';
+export const JOIN_US_DESCRIPTION_4 = 'Fill out the ';
 export const JOIN_US_DESCRIPTION_5 = 'The fee is $15 per calendar year for individuals and $20 per calendar year for families.';
 export const GOOGLE_FORM = 'Google Form';
+export const BECOME_A_MEMBER = 'Become an MPRC Member';
+
+export const WAYS_TO_RUN = 'Ways To Run With Us';
 
 export const JOIN_US_BUTTON_1 = 'RSVP on Meetup';
 export const JOIN_US_BUTTON_2 = 'Membership Form';
 
-export const H2_JOIN_US = 'Member Benefits';
+export const MEMBER_BENEFITS = 'Member benefits include:';
 export const LI_SATURDAY_CLUB_RUNS = 'Saturday morning club runs';
 export const LI_CLUB_SUPPORT_NETWORKING = 'Club support, networking with members, guest coaches/speakers';
 export const LI_CLUB_GATHERINGS = 'Club Gatherings with baked goods and hot beverages the last Saturday of every month';
@@ -24,19 +28,10 @@ export const LI_AFFORDABLE_MEMBERSHIP_FEES = 'Affordable membership fees';
 export const LI_EASY_ANNUAL_RENEWAL_PROCESS = 'Easy annual renewal process';
 export const ARM = 'A Runner\'s Mind';
 
-export const WAIVER_TEXT = `I understand that participating in group runs, social events, and
-  races are potentially hazardous activities that could cause injury or
-  death. I will not participate in any group activities unless I am
-  medically able and properly trained. I assume all risks associated
-  with being a member of this group and participating in its activities,
-  which may include, but are not limited to: falls, contact with other
-  participants, effects of the weather, traffic, and road conditions.
-  Having read this waiver and knowing these facts, I waive and release
-  the group organizers and hosts, the Mid-Peninsula Running Club
-  \(including its officers and other members\), all sponsors, and their
-  representatives and successors from all claims or liabilities of any
-  kind arising out of my participation in group activities, even though
-  that liability may arise out of negligence or carelessness on the part
-  of persons named in this waiver. By participating in this group, I
-  accept these terms and conditions.`;
+export const WAIVER_TITLE = 'Liability Waiver';
+export const WAIVER_TEXT = `
+  I know that running in and volunteering for organized group runs, social events, and races with this club are potentially hazardous activities, which could cause injury or death. I will not participate in any activities associated with the club, unless I am medically able and properly trained. I agree to abide by all rules established by the club, including the right of any official to deny or suspend my participation for any reason whatsoever. I assume all risks associated with participating in club activities which may include, but not limited to: falls, contact with other participants, the effects of the weather, traffic and the road conditions. Having read this waiver and knowing these facts, I, for myself and anyone entitled to act on my behalf, waive and release the Mid-Peninsula Running Club (including its officers and other members), all sponsors, and their representatives and successors, from all claims or liabilities of any kind arising out of my participation in club activities, even though that liability may arise out of negligence or carelessness on the part of persons named in this waiver.
+
+Consent to use Photographic Images: I hereby authorize and grant to The Mid-Peninsula Running Club full rights and permissions to use and publish onto various MPRC websites and social media outlets, photographs taken of members and their guests, or contributed by them, or published on their public social media.
+`;
 export const WAIVER_AGREEMENT = 'I agree to the terms and conditions.';
