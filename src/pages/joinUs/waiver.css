@@ -19,3 +19,8 @@
 .waiver-agree-text {
   margin: 10px;
 }
+
+.waiver-text {
+  white-space: pre-line;
+  text-align: justify;
+}

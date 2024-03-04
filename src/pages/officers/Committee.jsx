@@ -6,8 +6,8 @@ import './committee.css';
 import { COMMITTEE_INTRO, COMMITTEE_TITLE } from '../../text/Committee';
 
 // const OfficerDefault = require('../../images/committee/committee_default_portrait.png');
-const Officer1 = require('../../images/committee/frances_1.jpeg');
-const Officer1Alt = require('../../images/committee/frances_2.jpg');
+const Officer1 = require('../../images/committee/frances_1.jpg');
+/* const Officer1Alt = require('../../images/committee/frances_2.jpg'); */
 const Officer2 = require('../../images/committee/dave.png');
 const Officer3 = require('../../images/committee/ted.jpg');
 const Officer4 = require('../../images/committee/kat.jpg');
@@ -20,7 +20,7 @@ const officers = [
   {
     id: 1,
     image: Officer1,
-    imageAlt: Officer1Alt,
+    /* imageAlt: Officer1Alt, */
     name: 'Frances Schulze',
     job: 'President' /* socials: [
       "https://instagram.com/",

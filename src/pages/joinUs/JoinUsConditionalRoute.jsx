@@ -10,7 +10,6 @@ function JoinUsConditionalRoute() {
 
   useEffect(() => {
     const waiverSigned = localStorage.getItem('waiverSigned');
-    console.log(waiverSigned);
     setHasSignedWaiver(waiverSigned === 'true');
   }, []);
 
