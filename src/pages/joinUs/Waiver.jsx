@@ -32,7 +32,7 @@ function Waiver({ onWaiverSubmit }) {
 
   return (
     <FlexColumnContainer>
-      <h1 className="waiver-title">{WAIVER_TITLE}</h1>
+      <h2 className="waiver-title">{WAIVER_TITLE}</h2>
       <form className="waiver-form" onSubmit={handleSubmit}>
         <p className="waiver-text">{WAIVER_TEXT}</p>
         <label className="waiver-agree-checkbox" htmlFor="waiver-agree-checkbox">
