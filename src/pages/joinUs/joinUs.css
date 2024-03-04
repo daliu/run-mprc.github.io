@@ -1,3 +1,14 @@
+.ul_joinus .li_joinus {
+  list-style-type: disc;
+  text-align: left;
+}
+
+/* Style for the nested list items */
+.ul_joinus .ul_joinus li {
+  list-style-type: circle; /* Use circle for nested bullets */
+  margin-left: 1.5rem; /* Adjust the indentation as needed */
+}
+
 .joinus__container {
   display: grid;
   place-items: center;
@@ -14,11 +25,6 @@
   }
 }
 
-.li_joinus {
-  list-style-type: disc;
-  text-align: left;
-}
-
 .h2_joinus {
   padding-bottom: 2rem;
 }
@@ -33,4 +39,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.head_desc {
+  text-align: center;
 }

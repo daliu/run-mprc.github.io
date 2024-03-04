@@ -1,6 +1,5 @@
 export const HOME_HERO_TEXT_1 = 'Mid-Peninsula Run Club';
 export const HOME_HERO_TEXT_2 = 'Serving runners on the San Francisco Peninsula since 1988';
-export const HOME_HERO_BUTTON_TEXT = 'Run with us';
 
 export const ABOUT_STORY_TITLE = 'Welcome to MPRC!';
 
@@ -22,4 +21,4 @@ export const ABOUT_MISSION_CONTENT = [
   "Join us in celebrating the joy of running and in our mission of supporting one another. Let's hit the trails, share some stories, and enjoy the run – one step at a time!",
 ];
 
-export const JOINBUTTON = 'Join Us Now!';
+export const JOINBUTTON = 'Run with us!';

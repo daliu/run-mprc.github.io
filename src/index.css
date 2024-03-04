@@ -76,6 +76,14 @@ a {
   color: var(--color-gray-100);
 }
 
+a.hyperlink {
+  color: var(--color-secondary);
+}
+
+a.hyperlink:hover {
+  text-decoration: underline; /* Show underline on hover for anchor elements except those with class "btn lg" */
+}
+
 img {
   display: block;
   object-fit: cover;
@@ -140,7 +148,7 @@ section {
   background: var(--color-gray-500);
   border: 2px solid transparent;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 3rem 3rem;
   border-radius: 0 3rem 0 3rem;
   transition: var(--transition);
 }
