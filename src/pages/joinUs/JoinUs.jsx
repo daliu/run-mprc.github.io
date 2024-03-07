@@ -6,13 +6,20 @@ import { faGoogle, faMeetup } from '@fortawesome/free-brands-svg-icons';
 import MetaText from '../../components/MetaText';
 import {
   ARM,
+  BECOME_A_MEMBER,
   GOOGLE_FORM,
-  MEMBER_BENEFITS,
+  JOIN_US_BUTTON_1,
+  JOIN_US_BUTTON_2,
   JOIN_US_DESCRIPTION_1,
   JOIN_US_DESCRIPTION_2,
   JOIN_US_DESCRIPTION_3,
   JOIN_US_DESCRIPTION_4,
   JOIN_US_DESCRIPTION_5,
+  JOIN_US_HEADING_DESC,
+  JUST_RUN_WITH_US,
+  JUST_RUN_WITH_US_CONTENT_1,
+  JUST_RUN_WITH_US_CONTENT_2,
+  JUST_RUN_WITH_US_CONTENT_3,
   LI_ACCESS_TO_STRAVA_FACEBOOK,
   LI_AFFORDABLE_MEMBERSHIP_FEES,
   LI_CLUB_GATHERINGS,
@@ -25,15 +32,11 @@ import {
   LI_SATURDAY_CLUB_RUNS,
   LI_SOCIAL_RACE_ACTIVITIES,
   MEETUP_GROUP,
-  JOIN_US_BUTTON_1,
-  JOIN_US_BUTTON_2, WAYS_TO_RUN, JOIN_US_HEADING_DESC, BECOME_A_MEMBER,
+  MEMBER_BENEFITS,
+  WAYS_TO_RUN,
 } from '../../text/JoinUs';
 import Card from '../../UI/Card';
-import {
-  ARM_URI,
-  GOOGLE_FORM_LINK,
-  MEETUP_URI,
-} from '../../text/externalLinks';
+import { ARM_URI, GOOGLE_FORM_LINK, MEETUP_URI } from '../../text/externalLinks';
 import Route from './Route';
 import Paragraph from '../../components/Paragraph';
 
@@ -51,6 +54,19 @@ const sectionHeading = () => (
 );
 
 const sectionRunWithUs = () => (
+  <Card className="joinus__card">
+    <h2 className="h2_joinus">
+      {JUST_RUN_WITH_US}
+    </h2>
+    <ul className="ul_joinus">
+      <li className="li_joinus">{JUST_RUN_WITH_US_CONTENT_1}</li>
+      <li className="li_joinus">{JUST_RUN_WITH_US_CONTENT_2}</li>
+      <li className="li_joinus">{JUST_RUN_WITH_US_CONTENT_3}</li>
+    </ul>
+  </Card>
+);
+
+const sectionMeetup = () => (
   <Card className="joinus__card">
     <h2 className="h2_joinus">
       {JOIN_US_DESCRIPTION_1}
@@ -131,6 +147,8 @@ function JoinUs() {
           {sectionHeading()}
           &nbsp;&nbsp;
           {sectionRunWithUs()}
+          &nbsp;&nbsp;
+          {sectionMeetup()}
           &nbsp;&nbsp;
           {sectionBecomeMember()}
           &nbsp;&nbsp;
