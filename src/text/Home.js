@@ -4,11 +4,11 @@ export const HOME_HERO_TEXT_2 = 'Serving runners on the San Francisco Peninsula 
 export const ABOUT_STORY_TITLE = 'Welcome to MPRC!';
 
 export const ABOUT_STORY_CONTENT = [
-  "Welcome to the Mid-Peninsula Running Club, where running is more than just a workout – it's a community! Since 1988, we've been bringing together runners from all walks of life on the San Francisco Peninsula (San Mateo County).",
-  'Our club emphasizes forging connections while enjoying the outdoors. We have over 130 friendly club members who share a love for staying active and appreciating the beauty of nature.',
-  "Every Saturday morning at 8:45 AM, we have our main run/walk on the Bay Trail in San Mateo. You can choose to run or walk any distance from 4-6 miles. It's a great way to start the weekend!",
+  "Since 1988, the Mid-Peninsula Running Club has brought together runners from all walks of life on the San Francisco Peninsula (San Mateo County).",
+  'Our club emphasizes forging connections while enjoying the outdoors. We have over 190+ friendly club members who share a love for staying active and enjoying nature.',
+  "Every Saturday morning at 8:45 AM, we meet for introductinos and start our 1-hour out-and-back run/walk on the Bay Trail. Most of our participants cover 4-6 miles in the hour, but you can feel free to turn around whenever.",
   'We also have special events just for our members throughout the year, giving us more chances to have fun together.',
-  "Come and join us! We're all about running, making friends, and having a good time.",
+  "Come and join us! We're all about running, making friends, and having a good time. It's a great way to start the weekend!",
 ];
 
 // Our Mission Section
