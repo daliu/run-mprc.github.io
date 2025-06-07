@@ -66,30 +66,31 @@ const sectionRunWithUs = () => (
   </Card>
 );
 
-const sectionMeetup = () => (
-  <Card className="joinus__card">
-    <h2 className="h2_joinus">
-      {JOIN_US_DESCRIPTION_1}
-      <a className="hyperlink" href={MEETUP_URI} target="_blank" rel="noreferrer noopener">
-        {MEETUP_GROUP}
-        {' '}
-        <FontAwesomeIcon icon={faMeetup} />
-      </a>
-    </h2>
-    <ul className="ul_joinus">
-      <li className="li_joinus">{JOIN_US_DESCRIPTION_2}</li>
-      <li className="li_joinus">{JOIN_US_DESCRIPTION_3}</li>
-    </ul>
-    <Link
-      to={MEETUP_URI}
-      className="btn lg"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {JOIN_US_BUTTON_1}
-    </Link>
-  </Card>
-);
+// 2025-06-07: Meetup is no longer used for club activities.
+// const sectionMeetup = () => (
+//   <Card className="joinus__card">
+//     <h2 className="h2_joinus">
+//       {JOIN_US_DESCRIPTION_1}
+//       <a className="hyperlink" href={MEETUP_URI} target="_blank" rel="noreferrer noopener">
+//         {MEETUP_GROUP}
+//         {' '}
+//         <FontAwesomeIcon icon={faMeetup} />
+//       </a>
+//     </h2>
+//     <ul className="ul_joinus">
+//       <li className="li_joinus">{JOIN_US_DESCRIPTION_2}</li>
+//       <li className="li_joinus">{JOIN_US_DESCRIPTION_3}</li>
+//     </ul>
+//     <Link
+//       to={MEETUP_URI}
+//       className="btn lg"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//     >
+//       {JOIN_US_BUTTON_1}
+//     </Link>
+//   </Card>
+// );
 
 const sectionBecomeMember = () => (
   <Card className="joinus__card">
