@@ -6,13 +6,13 @@ import './committee.css';
 import { COMMITTEE_INTRO, COMMITTEE_TITLE } from '../../text/Committee';
 
 // const OfficerDefault = require('../../images/committee/committee_default_portrait.png');
-const Officer1 = require('../../images/committee/frances_1.jpg');
+const Officer1 = require('../../images/committee/frances.jpg');
 /* const Officer1Alt = require('../../images/committee/frances_2.jpg'); */
 const Officer2 = require('../../images/committee/dave.png');
 const Officer3 = require('../../images/committee/ted.jpg');
 const Officer4 = require('../../images/committee/kat.jpg');
-const Officer5 = require('../../images/committee/frank.jpg');
-const Officer6 = require('../../images/committee/debbie.jpeg');
+const Officer5 = require('../../images/committee/allison.jpg');
+const Officer6 = require('../../images/committee/debbie.jpg');
 const Officer7 = require('../../images/committee/patti.jpg');
 const Officer8 = require('../../images/committee/dalton.jpg');
 
@@ -50,7 +50,7 @@ const officers = [
   {
     id: 5,
     image: Officer5,
-    name: 'Frank Markowitz',
+    name: 'Allison Song',
     job: 'Newsletter Editor',
   },
   {
