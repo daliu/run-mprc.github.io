@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './joinUs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faMeetup } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle /* , faMeetup */ } from '@fortawesome/free-brands-svg-icons';
 import MetaText from '../../components/MetaText';
 import {
   ARM,
@@ -31,12 +31,12 @@ import {
   LI_RACE_DISCOUNT_CODES,
   LI_SATURDAY_CLUB_RUNS,
   LI_SOCIAL_RACE_ACTIVITIES,
-  MEETUP_GROUP,
+  /* MEETUP_GROUP, */
   MEMBER_BENEFITS,
   WAYS_TO_RUN,
 } from '../../text/JoinUs';
 import Card from '../../UI/Card';
-import { ARM_URI, GOOGLE_FORM_LINK, MEETUP_URI } from '../../text/externalLinks';
+import { ARM_URI, GOOGLE_FORM_LINK /* , MEETUP_URI */ } from '../../text/externalLinks';
 import Route from './Route';
 import Paragraph from '../../components/Paragraph';
 
@@ -149,7 +149,7 @@ function JoinUs() {
           &nbsp;&nbsp;
           {sectionRunWithUs()}
           &nbsp;&nbsp;
-          {sectionMeetup()}
+          {/* {sectionMeetup()} */}
           &nbsp;&nbsp;
           {sectionBecomeMember()}
           &nbsp;&nbsp;
