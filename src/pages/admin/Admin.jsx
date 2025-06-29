@@ -1,28 +1,15 @@
 import React from 'react';
 import './Admin.css';
-import { MdEmail } from 'react-icons/md';
 import Header from '../../components/Header';
 import HeaderImage from '../../images/contact/header_bg_2.jpg';
-import { CONTACT_DESCRIPTION, CONTACT_TITLE } from '../../text/ContactUs';
 
 function Admin() {
   return (
     <>
-      <Header title={CONTACT_TITLE} image={HeaderImage} />
-
-      <section className="contact">
-        <div className="container contact__container">
-          {CONTACT_DESCRIPTION}
-          <div className="contact__wrapper">
-            <a
-              href="mailto:runmprc@gmail.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="Send email to runmprc@gmail.com"
-            >
-              <MdEmail />
-            </a>
-          </div>
+      <Header title="Admin Panel" image={HeaderImage} />
+      <section className="admin">
+        <div className="container admin__container">
+          <p>Admin panel content will be available here for authorized users.</p>
         </div>
       </section>
     </>

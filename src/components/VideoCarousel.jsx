@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function VideoContainer({ videos }) {
+function VideoContainer({ videos, titles = [] }) {
   return (
     <div className="flex flex-col md:flex-row overflow-hidden my-4 w-full">
       {videos.map((videoSrc, index) => (
@@ -11,8 +11,10 @@ function VideoContainer({ videos }) {
         >
           <iframe
             src={videoSrc}
-            title={`video ${index + 1}`}
+            title={titles[index] || `MPRC video ${index + 1}`}
             className="w-full h-64 md:mx-10"
+            loading="lazy"
+            allowFullScreen
           />
         </div>
       ))}
@@ -22,6 +24,7 @@ function VideoContainer({ videos }) {
 
 VideoContainer.propTypes = {
   videos: PropTypes.arrayOf(PropTypes.string).isRequired,
+  titles: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default VideoContainer;

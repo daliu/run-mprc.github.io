@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // A reuseable component for each section name
 function SectionHead({ icon, title, className }) {
@@ -9,5 +10,15 @@ function SectionHead({ icon, title, className }) {
     </div>
   );
 }
+
+SectionHead.propTypes = {
+  icon: PropTypes.node,
+  title: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
+SectionHead.defaultProps = {
+  className: '',
+};
 
 export default SectionHead;

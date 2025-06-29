@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function Officer({
-  image, imageAlt, name, job, /* socials, */
+  image, imageAlt, name, job,
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -22,7 +22,6 @@ function Officer({
       onFocus={handleMouseOver}
       onBlur={handleMouseOut}
     >
-
       <div className="officer__img">
         <img
           src={isHovered && imageAlt ? imageAlt : image}
@@ -31,34 +30,19 @@ function Officer({
       </div>
       <h3>{name}</h3>
       <p>{job}</p>
-      {/* <div className="officer__socials">
-        {socials.map(({ icon, link }, index) => {
-          return (
-            <a
-              href={link}
-              key={index}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              {icon}
-            </a>
-          );
-        })}
-      </div> */}
     </div>
   );
 }
 
 Officer.propTypes = {
   image: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string,
   name: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
-  /* socials: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.node.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-  ), */
 };
+
+Officer.defaultProps = {
+  imageAlt: null,
+};
+
 export default Officer;

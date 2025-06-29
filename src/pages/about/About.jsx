@@ -58,7 +58,6 @@ function About() {
           <div className="about__section-content">
             <h2>{ABOUT_STORY_TITLE}</h2>
             {ABOUT_STORY_CONTENT.map((paragraph, index) => (
-              // eslint-disable-next-line react/no-array-index-key
               <p key={`story-paragraph-${index}`}>{paragraph}</p>
             ))}
           </div>
@@ -69,7 +68,6 @@ function About() {
           <div className="about__section-content">
             <h2>{ABOUT_MISSION_TITLE}</h2>
             {ABOUT_MISSION_CONTENT.map((paragraph, index) => (
-              // eslint-disable-next-line react/no-array-index-key
               <p key={`mission-paragraph-${index}`}>{paragraph}</p>
             ))}
           </div>
