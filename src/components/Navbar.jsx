@@ -9,7 +9,7 @@ import Logo from '../assets/images/logo.svg';
 function Navbar() {
   const [isNavShowing, setIsNavShowing] = useState(false);
 
-  const handleNavToggle = () => setIsNavShowing((prevVAlue) => !prevVAlue);
+  const handleNavToggle = () => setIsNavShowing((prevValue) => !prevValue);
 
   const baseAnimationDelay = 100;
   const staggeredAnimationDelayIncrement = 50;
@@ -19,11 +19,12 @@ function Navbar() {
       baseAnimationDelay + index * staggeredAnimationDelayIncrement
     }ms`,
   });
+
   return (
     <nav>
       <div className="container nav__container">
         <Link to="/" className="logo" onClick={handleNavToggle}>
-          <img src={Logo} alt="Nav-logo" />
+          <img src={Logo} alt="MPRC Logo" />
         </Link>
         <ul
           className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__nav'}`}
@@ -46,6 +47,7 @@ function Navbar() {
           type="button"
           onClick={handleNavToggle}
           className="nav__toggle-btn"
+          aria-label={isNavShowing ? 'Close navigation menu' : 'Open navigation menu'}
         >
           {isNavShowing ? <MdOutlineClose /> : <FaBars />}
         </button>

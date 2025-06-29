@@ -4,17 +4,11 @@ import { useLocation } from 'react-router-dom';
 function ScrollToTop() {
   const { pathname } = useLocation();
 
-  const scrollToTop = () => {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 1);
-      // You can adjust the division value for smoother or faster scroll
-    }
-  };
-
   useEffect(() => {
-    scrollToTop();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, [pathname]);
 
   return null;

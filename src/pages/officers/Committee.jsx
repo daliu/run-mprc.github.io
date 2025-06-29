@@ -145,12 +145,11 @@ function Committee() {
       <section className="officers">
         <div className="container officers__container">
           {officers.map(({
-            id, image, imageAlt, name, job, /* socials, */
+            id, image, name, job,
           }) => (
             <Officer
               key={id}
               image={image}
-              imageAlt={imageAlt}
               name={name}
               job={job}
             />

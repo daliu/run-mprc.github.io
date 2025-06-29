@@ -8,45 +8,35 @@ function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { identityService } = useContext(ServiceLocatorContext);
   const [currentUser, setCurrentUser] = useState(null);
   const [isRegistering, setIsRegistering] = useState(false);
-  // New state to toggle between login and registration
-  const handleLogin = async (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
     try {
       if (isRegistering) {
         const user = await identityService.register(email, password);
-        // Adjust method name as per your service
         setCurrentUser(user);
       } else {
         const user = await identityService.signIn(email, password);
-        // Adjust method name as per your service
         setCurrentUser(user);
       }
     } catch (loginError) {
-      // console.error('Login error:', loginError);
-      setError('Failed to login. Please check your credentials and try again.');
+      setError('Failed to authenticate. Please check your credentials and try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
+  const handleToggleMode = () => {
+    setIsRegistering(!isRegistering);
     setError('');
-
-    try {
-      const user = await identityService.register(email, password);
-      // Adjust method name as per your service
-      // console.log(user);
-      setCurrentUser(user);
-    } catch (registerError) {
-      // console.error('Registration error:', registerError);
-      setError(
-        'Failed to register. Please check your credentials and try again.',
-      );
-    }
+    setCurrentUser(null);
   };
 
   return (
@@ -55,25 +45,38 @@ function LoginForm() {
         title={isRegistering ? 'Register' : 'Login'}
         image={HeaderImage}
       />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && (
+        <div className="error-message" style={{ color: 'red', textAlign: 'center', padding: '1rem' }}>
+          {error}
+        </div>
+      )}
       <FlexColumnContainer style={{ alignItems: 'center' }}>
         <form
-          onSubmit={isRegistering ? handleRegister : handleLogin}
+          onSubmit={handleSubmit}
           style={{
             display: 'flex',
             flexDirection: 'column',
             width: '100%',
             maxWidth: '300px',
             alignItems: 'center',
+            gap: '1rem',
           }}
         >
           <input
             type="email"
             placeholder="Email"
-            aria-label="Email"
+            aria-label="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ marginBottom: '10px' }}
+            required
+            disabled={isLoading}
+            style={{ 
+              marginBottom: '10px',
+              padding: '0.5rem',
+              width: '100%',
+              border: '1px solid #ccc',
+              borderRadius: '4px'
+            }}
           />
           <input
             type="password"
@@ -81,19 +84,48 @@ function LoginForm() {
             aria-label="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{ marginBottom: '10px' }}
+            required
+            disabled={isLoading}
+            style={{ 
+              marginBottom: '10px',
+              padding: '0.5rem',
+              width: '100%',
+              border: '1px solid #ccc',
+              borderRadius: '4px'
+            }}
           />
-          <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
+          <button 
+            type="submit" 
+            disabled={isLoading}
+            style={{
+              padding: '0.5rem 1rem',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: isLoading ? 'not-allowed' : 'pointer',
+              opacity: isLoading ? 0.6 : 1
+            }}
+          >
+            {isLoading ? 'Processing...' : (isRegistering ? 'Register' : 'Login')}
+          </button>
           {currentUser && (
-          <p>
-            Welcome,
-            {currentUser.name}
-            !
-          </p>
+            <p style={{ color: 'green', textAlign: 'center' }}>
+              Welcome, {currentUser.email}!
+            </p>
           )}
           <button
             type="button"
-            onClick={() => setIsRegistering(!isRegistering)}
+            onClick={handleToggleMode}
+            disabled={isLoading}
+            style={{
+              padding: '0.5rem 1rem',
+              backgroundColor: 'transparent',
+              color: '#007bff',
+              border: '1px solid #007bff',
+              borderRadius: '4px',
+              cursor: isLoading ? 'not-allowed' : 'pointer'
+            }}
           >
             {isRegistering ? 'Switch to Login' : 'Switch to Register'}
           </button>

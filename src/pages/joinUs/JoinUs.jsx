@@ -2,18 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './joinUs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle /* , faMeetup */ } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import SEO from '../../components/SEO';
 import MetaText from '../../components/MetaText';
 import {
   ARM,
   BECOME_A_MEMBER,
   GOOGLE_FORM,
-  JOIN_US_BUTTON_1,
   JOIN_US_BUTTON_2,
-  JOIN_US_DESCRIPTION_1,
-  JOIN_US_DESCRIPTION_2,
-  JOIN_US_DESCRIPTION_3,
   JOIN_US_DESCRIPTION_4,
   JOIN_US_DESCRIPTION_5,
   JOIN_US_HEADING_DESC,
@@ -32,12 +28,11 @@ import {
   LI_RACE_DISCOUNT_CODES,
   LI_SATURDAY_CLUB_RUNS,
   LI_SOCIAL_RACE_ACTIVITIES,
-  /* MEETUP_GROUP, */
   MEMBER_BENEFITS,
   WAYS_TO_RUN,
 } from '../../text/JoinUs';
 import Card from '../../UI/Card';
-import { ARM_URI, GOOGLE_FORM_LINK /* , MEETUP_URI */ } from '../../text/externalLinks';
+import { ARM_URI, GOOGLE_FORM_LINK } from '../../text/externalLinks';
 import Route from './Route';
 import Paragraph from '../../components/Paragraph';
 
@@ -66,32 +61,6 @@ const sectionRunWithUs = () => (
     </ul>
   </Card>
 );
-
-// 2025-06-07: Meetup is no longer used for club activities.
-// const sectionMeetup = () => (
-//   <Card className="joinus__card">
-//     <h2 className="h2_joinus">
-//       {JOIN_US_DESCRIPTION_1}
-//       <a className="hyperlink" href={MEETUP_URI} target="_blank" rel="noreferrer noopener">
-//         {MEETUP_GROUP}
-//         {' '}
-//         <FontAwesomeIcon icon={faMeetup} />
-//       </a>
-//     </h2>
-//     <ul className="ul_joinus">
-//       <li className="li_joinus">{JOIN_US_DESCRIPTION_2}</li>
-//       <li className="li_joinus">{JOIN_US_DESCRIPTION_3}</li>
-//     </ul>
-//     <Link
-//       to={MEETUP_URI}
-//       className="btn lg"
-//       target="_blank"
-//       rel="noopener noreferrer"
-//     >
-//       {JOIN_US_BUTTON_1}
-//     </Link>
-//   </Card>
-// );
 
 const sectionBecomeMember = () => (
   <Card className="joinus__card">
@@ -213,8 +182,6 @@ function JoinUs() {
             {sectionHeading()}
             &nbsp;&nbsp;
             {sectionRunWithUs()}
-            &nbsp;&nbsp;
-            {/* {sectionMeetup()} */}
             &nbsp;&nbsp;
             {sectionBecomeMember()}
             &nbsp;&nbsp;

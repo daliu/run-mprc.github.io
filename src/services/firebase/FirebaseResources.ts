@@ -27,15 +27,19 @@ class FirebaseResources {
       measurementId: 'G-BJX9HM4FQ8',
     };
 
-    this.app = initializeApp(firebaseConfig);
+    try {
+      this.app = initializeApp(firebaseConfig);
+      this.analytics = getAnalytics(this.app);
+      this.auth = getAuth(this.app);
+      this.firestore = getFirestore(this.app);
 
-    this.analytics = getAnalytics(this.app);
-    this.auth = getAuth(this.app);
-    this.firestore = getFirestore(this.app);
-
-    if (process.env.NODE_ENV === 'development') {
-      connectAuthEmulator(this.auth, 'http://localhost:9099');
-      connectFirestoreEmulator(this.firestore, '127.0.0.1', 8080);
+      if (process.env.NODE_ENV === 'development') {
+        connectAuthEmulator(this.auth, 'http://localhost:9099');
+        connectFirestoreEmulator(this.firestore, '127.0.0.1', 8080);
+      }
+    } catch (error) {
+      console.error('Failed to initialize Firebase:', error);
+      throw new Error('Firebase initialization failed');
     }
   }
 

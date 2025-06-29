@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ImageCarousel({ images }) {
+function ImageCarousel({ images, altTexts = [] }) {
   return (
     <div className="flex flex-col md:flex-row overflow-hidden my-4 w-full">
       {images.map((imageSrc, index) => (
@@ -13,7 +13,8 @@ function ImageCarousel({ images }) {
           <img
             src={imageSrc}
             className="object-cover object-center w-full h-64 md:mx-10"
-            alt={`carousel ${index + 1}`}
+            alt={altTexts[index] || `Activity image ${index + 1}`}
+            loading="lazy"
           />
         </div>
       ))}
@@ -23,6 +24,7 @@ function ImageCarousel({ images }) {
 
 ImageCarousel.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  altTexts: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ImageCarousel;

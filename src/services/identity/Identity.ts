@@ -19,7 +19,7 @@ class IdentityService {
         .then(() => {
           const { currentUser } = this.auth;
           if (!currentUser) {
-            reject(new Error('current user is null'));
+            reject(new Error('No authenticated user found'));
             return;
           }
           currentUser
@@ -30,13 +30,11 @@ class IdentityService {
               resolve(isMember);
             })
             .catch((error) => {
-              // console.log(error);
-              reject(new Error(error));
+              reject(new Error(`Failed to get user token: ${error.message}`));
             });
         })
         .catch((error) => {
-          reject(new Error(error));
-          // console.log(`Error occur while trying to fetch user.${error}`);
+          reject(new Error(`Authentication state error: ${error.message}`));
         });
     });
   }

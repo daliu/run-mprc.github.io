@@ -29,6 +29,28 @@ const videos = [
   'https://www.youtube.com/embed/EsuECjg4qng?si=i5RjsOhou5sjh8Gy',
 ];
 
+const brunchAltTexts = [
+  'MPRC members enjoying brunch together',
+  'Club members sharing a meal after running',
+  'Social gathering with food and conversation'
+];
+
+const activityAltTexts = [
+  'Monthly run club social gathering',
+  'Members sharing homemade treats and drinks'
+];
+
+const extraAltTexts = [
+  'Club picnic in the park',
+  'Volunteering at a local race',
+  'Costumed run celebration'
+];
+
+const videoTitles = [
+  'MPRC Saturday Morning Run Experience',
+  'Club Activities and Social Events'
+];
+
 function Activities() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -116,9 +138,9 @@ function Activities() {
           Our informal motto is &ldquo;The eating club with a running problem&rdquo;.
           We love to eat just as much as we love to run (probably more)!
           After most Saturday runs, we organize a group to try a different restaurant that we vote on.
-          If you're looking for a group of food-enthusiasts, this might be the place!;
+          If you're looking for a group of food-enthusiasts, this might be the place!
         </Paragraph>
-        <ImageCarousel images={brunchImages} />
+        <ImageCarousel images={brunchImages} altTexts={brunchAltTexts} />
         <Subheader title="Run Club Socials" />
         <Paragraph>
           Celebrate the end of each month with our Run Club Socials!
@@ -126,15 +148,15 @@ function Activities() {
           These gatherings are a way for us to connect with other members over
           homemade baked goods, fruits, snacks, and refreshing beverages!
         </Paragraph>
-        <ImageCarousel images={activityImages} />
+        <ImageCarousel images={activityImages} altTexts={activityAltTexts} />
         <h2 className="my-8">And sometimes, we just like to hang out…</h2>
         <Paragraph>
           We also host bi-annual club picnics for club members, volunteer at big races together,
           and have costumed runs on some holidays!
         </Paragraph>
-        <ImageCarousel images={extraImages} />
+        <ImageCarousel images={extraImages} altTexts={extraAltTexts} />
         <h2 className="my-8">Experience the MPRC through these videos</h2>
-        <VideoContainer videos={videos} />
+        <VideoContainer videos={videos} titles={videoTitles} />
       </FlexColumnContainer>
     </>
   );
