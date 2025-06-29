@@ -8,7 +8,7 @@ import {
 import Logo from '../assets/images/logo.svg';
 // import { FB_URI, MEETUP_URI, STRAVA_URI } from '../text/externalLinks';
 import { FB_URI, STRAVA_URI } from '../text/externalLinks';
-import { COPYRIGHT, DESC } from '../text/Footer';
+import { COPYRIGHT, DESC, DISCLAIMER } from '../text/Footer';
 
 function Footer() {
   return (
@@ -45,6 +45,11 @@ function Footer() {
           {' '}
           &copy;
           {COPYRIGHT}
+        </small>
+      </div>
+      <div className="footer__disclaimer">
+        <small>
+          {DISCLAIMER}
         </small>
       </div>
     </footer>
