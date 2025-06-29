@@ -6,7 +6,7 @@ import {
   ABOUT_MISSION_TITLE,
   ABOUT_STORY_CONTENT,
   ABOUT_STORY_TITLE,
-  JOINBUTTON,
+  JOIN_BUTTON,
 } from '../../text/Home';
 
 function About() {
@@ -37,7 +37,7 @@ function About() {
 
       <section className="join_btn_section">
         <Link to="/joinus" className="btn lg">
-          {JOINBUTTON}
+          {JOIN_BUTTON}
         </Link>
       </section>
     </>
