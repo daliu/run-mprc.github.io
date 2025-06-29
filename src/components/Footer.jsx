@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
   faStrava,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../assets/images/logo.svg';
 // import { FB_URI, MEETUP_URI, STRAVA_URI } from '../text/externalLinks';
-import { FB_URI, STRAVA_URI } from '../text/externalLinks';
+import { FB_URI, STRAVA_URI, INSTAGRAM_URI } from '../text/externalLinks';
 import { COPYRIGHT, DESC, DISCLAIMER } from '../text/Footer';
 
 function Footer() {
@@ -28,6 +29,9 @@ function Footer() {
             </a>
             <a href={STRAVA_URI} target="_blank" rel="noreferrer noopener" aria-label="Visit our Strava club">
               <FontAwesomeIcon icon={faStrava} />
+            </a>
+            <a href={INSTAGRAM_URI} target="_blank" rel="noreferrer noopener" aria-label="Visit our Instagram page">
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
         </article>
