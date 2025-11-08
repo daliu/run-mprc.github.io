@@ -125,7 +125,7 @@ function Activities() {
           With the motto "Support One Another", we try to partner new members with a similar paced runner!
           Many of our members enjoy the company and conversations on their runs, and paces vary widely.
           We welcome runners of all paces as well as walkers (and their dogs).
-          Even non-members are welcome to run with us as well, but yearly membership is only $15/year per person and $20 for the whole family.
+          Even non-members are welcome to run with us as well, but yearly membership is $25/year per person and $30/year for the whole family.
           We use the money to help us book venues, pay for food, and buy supplies for our seasonal picnics and events.
           For more details on how to run with us, check out our
           {' '}
